@@ -22,3 +22,5 @@ GET/posts/.
 * Cuántos elementos trae la respuesta: trae la lista completa de los elementos de la terminal de json devolviendo
 un resultado de 100 publicaciones.
 * Qué campos tiene cada elemento: presenta los mismos 4 campos de get post/1 userId, id, title y body
+
+# Provoca un error a propósito

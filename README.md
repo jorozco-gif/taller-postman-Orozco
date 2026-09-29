@@ -60,21 +60,21 @@ Además, la información debe enviarse mediante una representación estándar. U
 
 -1xx: el servidor recibio la peticion enviado por el navegador y continua procesandola.
 
-ej:100 Continue 101 Switching Protocols
+ej:100 Continue,101 Switching Protocols
 
 -2xx:indica que la solicitud que se pidio fue enviada correctamente.
 
 ej: 200 OK, 201 Created, 204 No Content
 
--3xx:el contenido a sido movido a una hubicacion diferente y se lleva al cliente o otra nueva hubicacion en donde se hizo la solicitud del pedido.
+-3xx:Indica que el recurso solicitado ha sido movido o que el cliente debe realizar alguna acción adicional para obtenerlo desde otra ubicación.
 
 ej:301 Moved Permanently, 302 Found, 304 Not Modified
  
--4xx el servidor no pudo completar la peticion o solicitud  ya sea que no existe o la paguina o hubo un error humano.
+-4xx El servidor no pudo completar la petición debido a un problema relacionado con la solicitud realizada por el cliente, por ejemplo, porque la solicitud es incorrecta, no está autorizada o el recurso no existe.
 
 ej:400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found
  
--5xx:la petición era válida pero el servidor falló al procesarla ya sea porque se agoto el tiempo de espera o problemas temporales de la red.
+-5xx:la petición era válida, pero el servidor falló al procesarla ya sea porque se agoto el tiempo de espera o problemas temporales de la red.
 
 ej:500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable
 
