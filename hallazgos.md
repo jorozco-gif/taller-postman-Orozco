@@ -62,3 +62,37 @@ En cambio el PATCH solo se modifico el title y las demas variable las dejo como 
 
 Usaria el PATCH, porque si usaba PUT las demas variables se borrarian que no es lo que se esta buscando y con PATCH solo cambiaria esa variable que es lo que  queremos corregir.
 
+# Encuentra el límite
+
+¿Cómo se llama este tipo de caso de prueba?
+Prueba de valores límite: nos permite verificar los valores validos como los anteriores y posteriores siendo estos
+
+- 1 y 100: bordes válidos (mínimo y máximo).
+
+- 0 y 101: justo fuera del rango (inválidos).
+
+
+
+¿Por qué se dice que los defectos se concentran en los límites?
+
+- Errores de "uno de más o uno de menos por ejemplo si nosotros escribimos el id < 100 cuando debía ser id <= 100 con lo que el registro 100 dejaría de devolverse.
+
+- Malas interpretaciones de los requisitos al decidir si el límite está incluido o excluido.
+
+# Explora otros recursos
+
+Rutas encontradas
+
+GET albums
+
+GETphotos
+
+Rutas anidada
+
+GET posts/1/comments
+
+Esplicación
+
+Yo la descubri metiendo al link del API de pruena que nos https://jsonplaceholder.typicode.com.
+
+La primer ruta
