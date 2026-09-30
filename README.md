@@ -109,3 +109,19 @@ En el 4xx la responsabilidad es del cliente, porque envió una solicitud incorre
 ### Fuentes consultadas:
 
 ¿Qué son los códigos HTTP? + lista completa de explicaciones de los códigos de estado: https://www.hostinger.com/es/tutoriales/codigos-http/
+
+# Cómo reproducir este taller
+
+Para importar la colección exportada, abre Postman y haz clic en el botón Import. Luego arrastra el archivo .json a la ventana, despueés la colección "Taller API" aparecerá en el panel Collections con sus 18 peticiones. ábre una y de clic en Send para ejecutarla, se repite con cada una de las peticiones.
+
+# Archivos de este repositorio
+
+ - README.md: Contiene tarea 1 investigacion de que es una API REST, tarea 2 Tabla de metodos de HTTP, tarea 3 las familias de códigos de estado y el como reproducir la colección.
+
+- hallazgos.md: Contiene Fase 2 tabla de espermentación de API, Tarea 4 leer un recurso y la colección completa, Tarea 5 provocar un error a propósito, Tarea 6 crear un recurso con POST, Tarea 7 la diferencia entre PUT y PATCH, Tarea 10 encontrar el límite, Tarea 11 explorar otros recursos, Tarea 12 Escribe tu primera prueba automática y Tarea 13 escribir tus propias pruebas.
+
+- concluciones.md: Contiene Tarea 8 idempotencia, Tarea 9 las cabeceras de la respuesta y Preguntas concluyentes.
+
+- coleeccion.js: Contiene toda la colección de taller API.
+
+- evidencia: Contienen las imagenes que reflejan que si se hizo el procedimiento.
