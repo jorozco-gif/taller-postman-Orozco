@@ -54,3 +54,9 @@ Permite comprobar que la respuesta no llegó truncada o vacía cuando esperabas 
 Ayuda a medir el peso de las respuestas y evaluar el rendimiento de la API.
 
 Si el valor no coincide con el tamaño real del cuerpo el cliente puede fallar o cortar la respuesta.
+
+# Escribe tu primera prueba automática
+
+¿por qué es importante ver una prueba fallar antes de confiar en ella?
+
+Es importante ver fallar una prueba primero para comprobar que realmente está validando lo que buscamos. Una prueba puede dar como correcta dependiendo de un atributo del API que no es el que nos interesa y en ese caso pasaría sin comprobar nada útil. Por eso conviene ejecutarla primero con un caso que sabemos que debe dar error de modo que, si falla, confirmaremos que lo que nos devuelve sí es lo que estamos buscando.
