@@ -77,8 +77,6 @@ Prueba de valores límite: nos permite verificar los valores validos como los an
 
 - 0 y 101: justo fuera del rango (inválidos).
 
-
-
 ## ¿Por qué se dice que los defectos se concentran en los límites?
 
 - Errores de "uno de más o uno de menos por ejemplo si nosotros escribimos el id < 100 cuando debía ser id <= 100 con lo que el registro 100 dejaría de devolverse.
@@ -108,6 +106,12 @@ La segunda ruta la GET photos me envia una lista de recursos con 5 atributo cada
 La ruta anidada la descubri al ejecutar GET comment , observe que tenía un atributo llamado postid, que vinculada a un post con varios comments. Por esta razón, al usar la ruta anidada GET posts/1/comments me va a mostrar una lista de comments que contenga el postid:1.
 
 Cada comentario contiene 5 atributos: postId, que identifica el post al que pertenece; id, que identifica cada comentario; name, que corresponde al nombre o título del comentario; email, que contiene el correo electrónico del usuario que lo escribió; y body, que contiene el texto del comentario.
+
+# Escribe tu primera prueba automática
+
+## ¿por qué es importante ver una prueba fallar antes de confiar en ella?
+
+Es importante ver fallar una prueba primero para comprobar que realmente está validando lo que buscamos. Una prueba puede dar como correcta dependiendo de un atributo del API que no es el que nos interesa y en ese caso pasaría sin comprobar nada útil. Por eso conviene ejecutarla primero con un caso que sabemos que debe dar error de modo que, si falla, confirmaremos que lo que nos devuelve sí es lo que estamos buscando.
 
 # Escribe tus propias pruebas.
 
