@@ -58,8 +58,22 @@ Ayuda a medir el peso de las respuestas y evaluar el rendimiento de la API.
 
 Si el valor no coincide con el tamaño real del cuerpo el cliente puede fallar o cortar la respuesta.
 
-# Escribe tu primera prueba automática
+# Preguntas concluyentes 
 
-¿por qué es importante ver una prueba fallar antes de confiar en ella?
+## ¿Qué le faltaría a la tabla fase 2 para ser un plan de pruebas formal?
 
-Es importante ver fallar una prueba primero para comprobar que realmente está validando lo que buscamos. Una prueba puede dar como correcta dependiendo de un atributo del API que no es el que nos interesa y en ese caso pasaría sin comprobar nada útil. Por eso conviene ejecutarla primero con un caso que sabemos que debe dar error de modo que, si falla, confirmaremos que lo que nos devuelve sí es lo que estamos buscando.
+Le faltaría algunas columnas adicionales que complementaria a las columnas exitente que son estas.
+
+- Objetivo de la prueba:Es una descripción del proposito de la consulta.
+
+- Datos de entrada : En métodos como POST, PUT y PATCH, que envían o modifican información, es indispensable mostrar los datos que se van a enviar.
+
+- Tests de verificación automáticos: El documento debe especificar qué validaciones lógicas o scripts se van a implementar en cada caso.
+
+- resultado esperados del test: Muestra el resultado que debería obtenerse, por ejemplo el código de estado y los campos clave de la respuesta.
+
+- coincide el resultado de test: Indica con "Sí" o "No" si lo obtenido corresponde con lo esperado.
+
+# # ¿por qué un 404 puede ser una buena noticia y un 200 puede ser un defecto.?
+ 
+ Yaque la prueba se realizó, para que pase un error 404, si da 200 es un bug grave que puede deberse a varios factores. Una es  que la solicitud puede estar mal escrita la url o estas usando un metodo incorrecto o la otra,es que haya un bug en la API que esta devolviendo toda la respuestas exitosas. 
