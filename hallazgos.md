@@ -85,7 +85,7 @@ Rutas encontradas
 
 GET albums
 
-GETphotos
+GET photos
 
 Rutas anidada
 
@@ -93,6 +93,12 @@ GET posts/1/comments
 
 Esplicación
 
-Yo la descubri metiendo al link del API de pruena que nos https://jsonplaceholder.typicode.com.
+Yo la descubri metiendo al link del API de pruena que nos dio: https://jsonplaceholder.typicode.com.
 
-La primer ruta
+La primera ruta, GET /albums, me muestra una lista de recursos. Cada álbum contiene 3 atributos: userId, que corresponde al identificador del usuario al que pertenece el álbum; id, que es el identificador de cada álbum y title, que corresponde al título del álbum.
+
+La segunda ruta la GET photos me envia una lista de recursos con 5 atributo cada uno que son: albumId, que es una identificador que vincula a en que album esta la foto; id, identificador de cada foto; title, titulo de la foto ; Url, enlace directo a la imagen y thumbnailUrl, Contiene el enlace a la miniatura de la imagen.
+
+La ruta anidada la descubri al ejecutar GET comment , observe que tenía un atributo llamado postid, que vinculada a un post con varios comments. Por esta razón, al usar la ruta anidada GET posts/1/comments me va a mostrar una lista de comments que contenga el postid:1.
+
+Cada comentario contiene 5 atributos: postId, que identifica el post al que pertenece; id, que identifica cada comentario; name, que corresponde al nombre o título del comentario; email, que contiene el correo electrónico del usuario que lo escribió; y body, que contiene el texto del comentario.
