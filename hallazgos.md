@@ -102,3 +102,67 @@ La segunda ruta la GET photos me envia una lista de recursos con 5 atributo cada
 La ruta anidada la descubri al ejecutar GET comment , observe que tenía un atributo llamado postid, que vinculada a un post con varios comments. Por esta razón, al usar la ruta anidada GET posts/1/comments me va a mostrar una lista de comments que contenga el postid:1.
 
 Cada comentario contiene 5 atributos: postId, que identifica el post al que pertenece; id, que identifica cada comentario; name, que corresponde al nombre o título del comentario; email, que contiene el correo electrónico del usuario que lo escribió; y body, que contiene el texto del comentario.
+
+# Escribe tus propias pruebas.
+
+Primer test verificando campos
+
+Test con resultados esperados valido
+
+pm.test("el correo del usuario que hizo el comentario id 2 es Jayne_Kuhic@sydney.com:", function () {
+    const jsonData = pm.response.json();
+    pm.expect(jsonData.email).to.equal("Jayne_Kuhic@sydney.com");
+});
+
+Test con resultados esperados falla
+
+pm.test("el correo del usuario que hizo el comentario id 2 es Meghan_Littel@rene.us:", function () {
+    const jsonData = pm.response.json();
+    pm.expect(jsonData.email).to.equal("Meghan_Littel@rene.us");
+});
+
+Explicación:
+
+Este test nos va ayudar para verificar el email usuario que hizo el comentario sea el esperado. En el primer test se verifico que el email del recurso 2 fuera Jayne_Kuhic@sydney.com y el resultado que dio fue el de passed. 
+
+En el siguiente test se intento la misma operación pero con un email erroneo que es Meghan_Littel@rene.us y el resultado fue el espera que era failed. Esto sirve para comprobar que la prueba está diseñada correctamente.
+
+Segundo test evaluando el tiempo de respuesta. 
+
+Test con resultados esperados valido
+
+pm.test("El tiempo de respuesta es menor a 500 ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(500);
+});
+
+Test con resultados esperados falla
+
+pm.test("El tiempo de respuesta es menor a 10 ms", function () {
+    pm.expect(pm.response.responseTime).to.be.below(10);
+});
+
+Explicación:
+
+Este test nos ayuda a verificar que el tiempo que tarda la API en responder esté dentro de un límite aceptable. En el primer test se verificó que el tiempo de respuesta fuera menor a 500 milisegundos (ms) y el resultado obtenido fue passed. 
+
+En el siguiente test se intentó la misma validación exigiendo un tiempo de respuesta irrealmente corto (menor a 10 ms) y el resultado fue el esperado: failed. Esto sirve para evaluar el rendimiento de la petición y asegurarnos de que la condición de la prueba funciona correctamente.
+
+Tercera test verificando el tipo de campo.
+
+Test con resultados esperados valido
+
+pm.test("el campo name es de tipo string", function () {
+    pm.expect(pm.response.json().name).to.be.a('string')
+});
+
+Test con resultados esperados falla
+
+pm.test("el campo name es de tipo number", function () {
+    pm.expect(pm.response.json().name).to.be.a('number')
+});
+
+Explicación:
+
+Este test nos permite comprobar que el formato o tipo de dato de un campo específico sea el correcto. En el primer test se verificó que el campo name fuera una cadena de texto (string), y el resultado fue passed. 
+
+En el siguiente test se intentó la misma evaluación pero esperando que el campo fuera de tipo numérico (number); como el dato real es texto, el resultado fue el esperado: failed. Esto es muy útil para garantizar la consistencia en la estructura de los datos devueltos por la API y confirmar que la validación esté bien hecha.
