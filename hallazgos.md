@@ -24,23 +24,28 @@ un resultado de 100 publicaciones.
 * Qué campos tiene cada elemento: presenta los mismos 4 campos de get post/1 userId, id, title y body
 
 # Provoca un error a propósito
-¿Este caso de prueba pasó o falló? Justifica tu respuesta.
+
+## ¿Este caso de prueba pasó o falló? Justifica tu respuesta.
 
 Es caso paso, porque el usuarios intensionalmenta busco un  servidor no existe y lo que obtuvo fue el resultado espera que es el estado 404 que es Not found. 
 
-¿qué pasaría si esa misma petición hubiera devuelto 200 con un cuerpo vacío?
-¿Sería un defecto?
+## ¿qué pasaría si esa misma petición hubiera devuelto 200 con un cuerpo vacío?
 
-Significa que la solicitud se proceso correctamente , pero es un falla ya que el resultado que buscamos era 404 que indica que el recurso no exite en el servidor.
+## ¿Sería un defecto?
+
+Significa que la solicitud se proceso correctamente, pero es un falla ya que el resultado que buscamos era 404 que indica que el recurso no exite en el servidor.
 
 # Crea un recurso con POST
 
-¿qué observaste? ¿Por qué crees que ocurre eso? ¿Cómo comprobarías, en una
-API real, que el recurso se creó de verdad?
+## ¿qué observaste?
 
 mis odservaciones fueron que el id simpre se mantuvo en 101 el unico cuando se le dio la opcion de darle 5 veces segidas y lo que cambio fue el tiempo de espera.
 
+## ¿Por qué crees que ocurre eso?
+
 Creo que ocurre porque hay 100 recurso y si le agregar uno nuevo por eso el id es 101 y siempre va a dar 101 sin importar las veces que lo envies es porque la API utilizada es una simulación y no está guardando realmente los recursos enviados. 
+
+## ¿Cómo comprobarías, en una API real, que el recurso se creó de verdad?
 
  En una API real, comprobaría que la respuesta de Postman muestre:
 
@@ -52,19 +57,20 @@ Creo que ocurre porque hay 100 recurso y si le agregar uno nuevo por eso el id e
 
 # La diferencia entre PUT y PATCH
 
-¿qué diferencia encontraste entre ambas respuestas? 
+## ¿qué diferencia encontraste entre ambas respuestas? 
 
 Las diferencia entre ambas es que PUT cambia todos los campos. Como solo pusimos title, este se modifico, mientras que los demas campo que no se enviaron que fué el body y el id_user los dejo en blanco.
 
 En cambio el PATCH solo se modifico el title y las demas variable las dejo como estaban.
 
-¿Cuál usarías para corregir un error de escritura en un solo campo, y por qué?
+## ¿Cuál usarías para corregir un error de escritura en un solo campo, y por qué?
 
 Usaria el PATCH, porque si usaba PUT las demas variables se borrarian que no es lo que se esta buscando y con PATCH solo cambiaria esa variable que es lo que  queremos corregir.
 
 # Encuentra el límite
 
-¿Cómo se llama este tipo de caso de prueba?
+## ¿Cómo se llama este tipo de caso de prueba?
+
 Prueba de valores límite: nos permite verificar los valores validos como los anteriores y posteriores siendo estos
 
 - 1 y 100: bordes válidos (mínimo y máximo).
@@ -73,7 +79,7 @@ Prueba de valores límite: nos permite verificar los valores validos como los an
 
 
 
-¿Por qué se dice que los defectos se concentran en los límites?
+## ¿Por qué se dice que los defectos se concentran en los límites?
 
 - Errores de "uno de más o uno de menos por ejemplo si nosotros escribimos el id < 100 cuando debía ser id <= 100 con lo que el registro 100 dejaría de devolverse.
 
@@ -81,7 +87,7 @@ Prueba de valores límite: nos permite verificar los valores validos como los an
 
 # Explora otros recursos
 
-Rutas encontradas
+Rutas encontradas.
 
 GET albums
 
@@ -91,7 +97,7 @@ Rutas anidada
 
 GET posts/1/comments
 
-Esplicación
+Esplicación:
 
 Yo la descubri metiendo al link del API de pruena que nos dio: https://jsonplaceholder.typicode.com.
 
@@ -166,3 +172,7 @@ Explicación:
 Este test nos permite comprobar que el formato o tipo de dato de un campo específico sea el correcto. En el primer test se verificó que el campo name fuera una cadena de texto (string), y el resultado fue passed. 
 
 En el siguiente test se intentó la misma evaluación pero esperando que el campo fuera de tipo numérico (number); como el dato real es texto, el resultado fue el esperado: failed. Esto es muy útil para garantizar la consistencia en la estructura de los datos devueltos por la API y confirmar que la validación esté bien hecha.
+
+## Fuentes consultadas:
+
+Documentación de POSTMAN: https://www.postman.com/postman/postman-team-collections/http-request/gdbgfhu/json-schema-v4-validation
