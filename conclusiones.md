@@ -74,6 +74,6 @@ Le faltaría algunas columnas adicionales que complementaria a las columnas exit
 
 - coincide el resultado de test: Indica con "Sí" o "No" si lo obtenido corresponde con lo esperado.
 
-# # ¿por qué un 404 puede ser una buena noticia y un 200 puede ser un defecto.?
+## ¿por qué un 404 puede ser una buena noticia y un 200 puede ser un defecto.?
  
  Yaque la prueba se realizó, para que pase un error 404, si da 200 es un bug grave que puede deberse a varios factores. Una es  que la solicitud puede estar mal escrita la url o estas usando un metodo incorrecto o la otra,es que haya un bug en la API que esta devolviendo toda la respuestas exitosas. 
